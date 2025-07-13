@@ -1,104 +1,150 @@
-# 🔥 Smart Industrial Overheat Protection System with Manual Reset
+# 🔧 Smart Industrial Overheat Protection System with Manual Reset
 
-An industrial-grade safety system designed using Arduino to monitor temperature using the LM35 sensor, protect motors from overheating, and enforce manual reset logic after cooling. Ideal for showcasing embedded systems skills for companies like Bosch, Siemens, and Tata.
+A real-world industrial safety system built using **Arduino** and **Tinkercad** to monitor temperature, prevent motor overheating, and enforce **manual reset after critical shutdown** — inspired by standards in companies like **Bosch**, **Siemens**, and **Tata**.
 
 ---
 
-## 📸 Project Preview
+## 🎬 Project Demo (GIF)
 
-![System Simulation](./Smart%20Industrial%20Overheat%20Protection%20System.png)
+![Project Demo](smart_overheat_demo.gif)
+
+> 🔥 Demonstrates automatic fan + buzzer trigger, LCD update, and reset logic when temperature exceeds 60°C.
+
+---
+
+## 📸 Circuit Diagram
+
+![Circuit Diagram](circuit_diagram.png)
+
+> Built using Tinkercad | Includes LM35, Relay, Fan (DC), LCD, Buzzer, LEDs, Reset Button
+
+---
+
+## 🔗 Live Simulation
+
+👉 [Open in Tinkercad](https://www.tinkercad.com/things/cbpRQqKQLIC)
+
+> You can test the project logic live — simulate overheat and reset cycle.
+
+---
+
+## 🎯 Project Purpose
+
+This project is designed for **industrial motor safety**. Overheating motors can cause breakdowns, fires, or downtime. This system:
+
+- 📡 Monitors real-time temperature with LM35 sensor  
+- 🚨 Shuts down motor + triggers fan and buzzer at 60°C  
+- 📺 Displays status and temperature on LCD  
+- 🟡 Waits for cooling period  
+- 🔘 Requires **manual reset** by an operator — like real safety-critical systems
 
 ---
 
 ## 🔧 Features
 
-- 🧠 LM35 temperature sensing
-- ⚠️ Overheat detection at 60°C
-- 🔄 Cooling phase with motor fan
-- ⏱️ 30-second cooldown (can be set to 5 mins)
-- 🔘 Manual reset via push button
-- 🖥️ Real-time status on 16x2 LCD
-- 🔊 Buzzer + LED indicators
+- ✅ Temperature monitoring (LM35)
+- ✅ LCD display (16x2)
+- ✅ Fan + buzzer control
+- ✅ Green / Red / Yellow LED indication
+- ✅ Manual reset using push button
+- ✅ Clean circuit and code
 
 ---
 
-## 🧾 Bill of Materials
+## 📦 Components Used
 
-| Component | Quantity |
-|----------|----------|
-| Arduino UNO | 1  
-| LM35 Temperature Sensor | 1  
-| 16x2 LCD Display | 1  
-| DC Motor (Fan) | 1  
-| Red, Green, Yellow LEDs | 3  
-| Buzzer | 1  
-| Push Button | 1  
-| Potentiometer (10k) | 1  
-| Breadboard + Jumpers | As needed  
+| Component             | Quantity |
+|----------------------|----------|
+| Arduino UNO          | 1        |
+| LM35 Temp Sensor     | 1        |
+| DC Motor (Fan)       | 1        |
+| 16x2 LCD Display     | 1        |
+| Buzzer               | 1        |
+| Push Button          | 1        |
+| Red, Green, Yellow LEDs | 3     |
+| Potentiometer (for LCD) | 1     |
+| Relay (SPDT)         | 1        |
+| Breadboard & Wires   | As needed |
 
-📎 Full BOM attached: [`bom.csv`](./bom.csv)
+📁 [BOM File](bom.csv)
 
 ---
 
-## 💻 Code
+## ⚙️ How It Works
 
-Arduino source file: [`smart_industrial_overheat_protection_system1.ino`](./smart_industrial_overheat_protection_system1.ino)
+1. System monitors temperature in real-time
+2. At **> 60°C**:
+   - Fan ON
+   - Buzzer & Red LED ON
+   - Motor OFF
+   - LCD shows **Overheat!**
+3. After **cool-down period**
+4. Manual reset button must be pressed to restart system
+
+---
+
+## 🧠 System Flow
+
+[LM35] → [Arduino UNO] → [LCD Display]
+→ [Relay + Motor Control]
+→ [LEDs: Green, Yellow, Red]
+→ [Buzzer]
+→ [Manual Reset Button]
+
+yaml
+Copy
+Edit
+
+🟢 Normal | 🔴 Overheat | 🟡 Cooling | 🔘 Manual Reset
+
+---
+
+## 💻 Source Code
+
+📄 [`smart_industrial_overheat_protection_system1.ino`](smart_industrial_overheat_protection_system1.ino)
+
+Includes full logic with state handling, temperature thresholds, delay simulation, and LCD interface.
 
 ---
 
 ## 📄 Documentation
 
-All system explanation, logic flow, and wiring guide included in:  
-📘 [`Smart Industrial Overheat Protection System.pdf`](./Smart%20Industrial%20Overheat%20Protection%20System.pdf)
+📘 Full design explanation, working principle, and circuit:
+[`Smart-Industrial-Overheat-Protection-System.pdf`](Smart-Industrial-Overheat-Protection-System.pdf)
 
 ---
 
-## 🏭 Industry Relevance
+## 🏭 Real-World Application
 
-This project simulates real-world motor safety systems used in industrial machines, HVAC units, and manufacturing equipment.
-
-✅ Shows understanding of:
-- Safety protocols  
-- Embedded control systems  
-- Manual override logic  
-- UI + sensor integration
+✅ Industrial motor panels  
+✅ CNC or gearbox protection  
+✅ Smart factory HVAC  
+✅ Preventive maintenance in automation setups
 
 ---
 
-## ✅ How It Works
+## 🧰 Tools Used
 
-| Condition | System Response |
-|----------|-----------------|
-| Temp < 60°C | Green LED ON, motor ON  
-| Temp ≥ 60°C | Red LED + buzzer, motor OFF, fan ON  
-| Cooldown 30s | Yellow LED ON  
-| After cooldown | Waits for manual button reset  
-| Button Pressed | System resets to normal state
-
----
-
-## 📂 Folder Structure
-
-Smart Industrial Overheat Protection System/
-├── smart_industrial_overheat_protection_system1.ino
-├── Smart Industrial Overheat Protection System.pdf
-├── bom.csv
-├── Smart Industrial Overheat Protection System.png
----
-
-## 🚀 Try It On
-
-💡 Simulate this project on [Tinkercad Circuits](https://www.tinkercad.com/circuits)  
-Perfect for interviews, resumes, or engineering project showcases.
+- Arduino IDE  
+- Tinkercad Circuits  
+- C Programming  
+- Embedded systems logic  
+- Sensor integration (LM35)  
+- Manual control safety reset
 
 ---
 
-## 🙌 Made with Love by
+## 👨‍💻 Author
 
 **Parth Pawar**  
-🚀 Passionate Embedded & AI Builder  
-📍 India  
-🔗 [LinkedIn](https://www.linkedin.com/in/parth-pawar-b82628248/) | [GitHub](https://github.com/parth-558)
+🔗 [GitHub](https://github.com/parth-558)  
+🔗 [LinkedIn](https://www.linkedin.com/in/parth-pawar-b82628248/)
 
 ---
 
+## 🏷️ Tags
+> arduino, lm35, motor-protection, embedded-system, industrial, safety, iot, tinkercad, temperature, lcd
+
+> ⭐ Project Level: Intermediate  
+> ⚙️ Difficulty: 4/5  
+> 💼 Built for Industry Safety Use-Cases
