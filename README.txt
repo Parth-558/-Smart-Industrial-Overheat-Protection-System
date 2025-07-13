@@ -6,7 +6,7 @@ An industrial-grade safety system designed using Arduino to monitor temperature 
 
 ## 📸 Project Preview
 
-![System Simulation](./Smart%20Industrial%20Overheat%20Protection%20System.png)
+![System Simulation](Smart Industrial Overheat Protection System.png)
 
 ---
 
