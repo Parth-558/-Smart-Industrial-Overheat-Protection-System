@@ -64,7 +64,7 @@ In factories and industrial machines, overheating can damage motors and cause sa
 | 10k Potentiometer   | 1        |
 | Breadboard + Wires  | As needed |
 
-📎 BOM File: [`bom.csv`](./bom.csv)
+📎 BOM File: [`bom.csv`](bom.csv)
 
 ---
 
