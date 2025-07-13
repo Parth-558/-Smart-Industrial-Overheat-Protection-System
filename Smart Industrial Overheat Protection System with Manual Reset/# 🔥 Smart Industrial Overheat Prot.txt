@@ -1,4 +1,6 @@
-# 🔥 Smart Industrial Overheat Protection System with Manual Reset
+Smart Industrial Overheat Protection System with Manual Reset/README.md
+⬇️
+README.md
 
 An industrial-grade safety system designed using Arduino to monitor temperature using the LM35 sensor, protect motors from overheating, and enforce manual reset logic after cooling. Ideal for showcasing embedded systems skills for companies like Bosch, Siemens, and Tata.
 
