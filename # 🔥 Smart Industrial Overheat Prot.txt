@@ -6,7 +6,7 @@ An industrial-grade embedded system designed using Arduino to protect motors fro
 
 ## 🎬 Project Demo (GIF)
 
-![Project Demo](./demo.gif)
+![Project Demo](smart_overheat_demo.gif)
 
 > 🔥 Shows temperature rise, fan/buzzer triggering, LCD update, and manual reset
 
