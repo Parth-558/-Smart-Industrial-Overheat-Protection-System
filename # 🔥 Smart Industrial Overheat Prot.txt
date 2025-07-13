@@ -14,7 +14,7 @@ An industrial-grade embedded system designed using Arduino to protect motors fro
 
 ## 📸 Project Preview
 
-![System Simulation](Smart-Industrial-Overheat-Protection-System.png)
+![System Simulation](Smart Industrial Overheat Protection System.png)
 
 ---
 
