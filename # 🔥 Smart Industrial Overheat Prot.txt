@@ -98,14 +98,14 @@ In factories and industrial machines, overheating can damage motors and cause sa
 ## 💻 Code
 
 🧠 Full Arduino Source File:  
-[`smart_industrial_overheat_protection_system1.ino`](./smart_industrial_overheat_protection_system1.ino)
+[`smart_industrial_overheat_protection_system1.ino`](smart_industrial_overheat_protection_system1.ino)
 
 ---
 
 ## 📄 Documentation
 
 📘 Full logic, wiring, and flow in:  
-[`Smart Industrial Overheat Protection System.pdf`](./Smart-Industrial-Overheat-Protection-System.pdf)
+[`Smart Industrial Overheat Protection System.pdf`](Smart-Industrial-Overheat-Protection-System.pdf)
 
 ---
 
