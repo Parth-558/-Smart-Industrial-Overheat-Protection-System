@@ -14,7 +14,7 @@ A real-world industrial safety system built using **Arduino** and **Tinkercad** 
 
 ## 📸 Circuit Diagram
 
-![Circuit Diagram](circuit_diagram.png)
+![Circuit Diagram]Smart Industrial Overheat Protection System.png)
 
 > Built using Tinkercad | Includes LM35, Relay, Fan (DC), LCD, Buzzer, LEDs, Reset Button
 
